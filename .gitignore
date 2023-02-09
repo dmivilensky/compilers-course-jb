@@ -1,4 +1,15 @@
+*
+!/**/
+!*.*
+*.aux
+*.log
+!/regression/orig/*.log
+*.out
 *.o
+*.a
+*.sm
 *.i
 *.s
-*.log
+!Makefile
+~/runrime/gc_runtime.s
+*.run
