@@ -41,6 +41,8 @@ fun eval_one([stack, st, w], i) {
     |  "!=" -> (a != b)
     |  ">=" -> (a >= b)
     |  ">" -> (a > b)
+    |  "!!" -> (a !! b)
+    |  "&&" -> (a && b)
     esac);
     [v:vs, st, w]
    ) esac)
@@ -61,7 +63,8 @@ public fun evalSM (input, insns) {
 }
 
 -- Compiles an expression into a stack machine code.
--- Takes an expression, returns a list of stack machine instructions
+-- Takes an expression, returns a list 
+-- of stack machine instructions
 fun compileExpr (expr) {
   case expr of 
     Var (s) -> {LD (s)} |
